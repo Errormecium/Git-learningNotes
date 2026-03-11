@@ -151,7 +151,7 @@ git commit -m "[log content]"
 ## .gitignore文件
 在与.git同级的根目录下创建`.gitignore`文件，添加文件名、通配符结合的文件名等，就可以使得指定文件被忽略，无法add和commit
 
-注意生效前提是修改`.gitignore`时指定文件不在版本库中
+注意生效前提是修改`.gitignore`时指定文件不被追踪，以及不在repo中
 
 注意的是powershell使用echo会出现编码问题
 
