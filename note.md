@@ -159,3 +159,30 @@ git commit -m "[log content]"
 ```bash
 "" | Out-File .gitignore -Encoding utf8
 ```
+
+## ssh配置
+
+本地仓库根目录生成ssh密钥:
+```bash
+# protocol:rsa size:4096
+ssh-keygen -t rsa -b 4096
+```
+
+然后指定密钥文件名，输入密码，注意文件名不要和之前的重合否则覆盖不可逆
+
+复制~.pub公钥文件的内容，github打开setting-SSH和GPG密钥，新建key并粘贴保存
+
+克隆命令:
+```bash
+git clone [ssh]
+```
+
+推送命令:
+```bash
+git push
+```
+
+拉取更新内容:
+```bash
+git pull
+```
